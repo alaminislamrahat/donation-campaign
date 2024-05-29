@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { getStoredDonations } from "../../utilities/localstorage";
 import SingleDonation from "../SingleDonation/SingleDonation";
+import { Helmet } from "react-helmet-async";
 
 
 const Donation = () => {
@@ -34,6 +35,9 @@ const Donation = () => {
 
     return (
         <div className="grid grid-cols-1 justify-center">
+            <Helmet>
+                <title>Donation | Donation</title>
+            </Helmet>
             <div className="md:grid grid-cols-2 gap-5 my-6 items-center">
 
                 <div className={donation.length > 0 && 'hidden'}>

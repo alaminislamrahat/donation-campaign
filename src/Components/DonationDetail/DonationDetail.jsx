@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { setStoredDonations } from "../../utilities/localstorage";
+import { Helmet } from "react-helmet-async";
 
 
 const DonationDetail = () => {
@@ -28,6 +29,9 @@ const DonationDetail = () => {
     }
     return (
         <div className="max-w-6xl mx-auto mb-5">
+            <Helmet>
+                <title>Donation|Donation Detail</title>
+            </Helmet>
             <img className=" w-full relative -z-0" src={Picture} alt="" />
             <div 
             className="md:w-[1152px]"
